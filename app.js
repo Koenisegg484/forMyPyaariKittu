@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       .toString()
       .padStart(2, "0");
 
-    const result = `第 <span class="digit">${days}</span> 天 <span class="digit">${hours}</span> 小时 <span class="digit">${minutes}</span> 分钟 <span class="digit">${seconds}</span> 秒`;
+    const result = `<span class="digit">${days}</span> days <span class="digit">${hours}</span>hours <span class="digit">${minutes}</span> mins <span class="digit">${seconds}</span> sec`;
     document.getElementById("clock").innerHTML = result;
   };
 
@@ -197,13 +197,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     footer.draw();
     tree.snapshot("p2", 500, 0, 610, 680);
 
-    // Assuming canvas is a plain DOM element and not a jQuery object.
     const canvasParent = canvas.parentNode;
 
-    // Set the background of the parent element
     canvasParent.style.background = `url(${tree.toDataURL("image/png")})`;
 
-    // Set CSS properties directly on the canvas element
     canvas.style.background = "#ffe";
     await sleep(300);
     canvas.style.background = "none";

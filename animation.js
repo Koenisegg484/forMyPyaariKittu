@@ -6,20 +6,15 @@
   const timer = setInterval(() => {
     const current = str.charAt(progress);
     if (current === "<") {
-      // Skip over HTML tags
       progress = str.indexOf(">", progress) + 1;
     } else {
-      // Increment the progress
       progress++;
     }
-    // Display the current substring with a cursor
     element.innerHTML = `${str.substring(0, progress)}${
       progress & 1 ? "_" : ""
     }`;
-    // If the full string is displayed, stop the interval
     if (progress >= str.length) {
       clearInterval(timer);
-      // Optionally remove the cursor at the end
       element.innerHTML = str;
     }
   }, speed);
@@ -193,8 +188,8 @@
 
       ctx.moveTo(0, 0);
       ctx.scale(0.75, 0.75);
-      ctx.font = '12px "微软雅黑", "Verdana"';
-      ctx.fillText("Miss You", 23, 10);
+      ctx.font = '12px "Segoe UI", "Verdana"';
+      ctx.fillText("Did", 23, 10);
       ctx.restore();
     };
 
