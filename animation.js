@@ -189,7 +189,7 @@
       ctx.moveTo(0, 0);
       ctx.scale(0.75, 0.75);
       ctx.font = '12px "Segoe UI", "Verdana"';
-      ctx.fillText("Did", 23, 10);
+      ctx.fillText("Hiii, Click me please", 23, 10);
       ctx.restore();
     };
 

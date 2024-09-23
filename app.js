@@ -20,61 +20,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     },
     branch: [
       [
-        535,
-        680,
-        570,
-        250,
-        500,
-        200,
-        30,
-        100,
+        535, 680, 570, 250, 500, 200, 30, 100,
         [
-          [
-            540,
-            500,
-            455,
-            417,
-            340,
-            400,
-            13,
-            100,
+          [ 540, 500, 455, 417, 340, 400, 13, 100,
             [[450, 435, 434, 430, 394, 395, 2, 40]],
           ],
-          [
-            550,
-            445,
-            600,
-            356,
-            680,
-            345,
-            12,
-            100,
+          [ 550, 445, 600, 356, 680, 345, 12, 100,
             [[578, 400, 648, 409, 661, 426, 3, 80]],
           ],
           [539, 281, 537, 248, 534, 217, 3, 40],
-          [
-            546,
-            397,
-            413,
-            247,
-            328,
-            244,
-            9,
-            80,
+          [ 546, 397, 413, 247, 328, 244, 9, 80,
             [
               [427, 286, 383, 253, 371, 205, 2, 40],
               [498, 345, 435, 315, 395, 330, 4, 60],
             ],
           ],
-          [
-            546,
-            357,
-            608,
-            252,
-            678,
-            221,
-            6,
-            100,
+          [ 546, 357, 608, 252, 678, 221, 6, 100,
             [[590, 293, 646, 277, 648, 271, 2, 80]],
           ],
         ],
@@ -120,8 +81,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       transformOrigin: "top left",
       width: `${newDimensions.width}px`,
       height: `${newDimensions.height}px`,
-      marginTop: `${margin.top}px`,
-      marginLeft: `${margin.left}px`,
+      // margin: 'auto',
+      marginTop: `400px`,
+      // marginLeft: `${margin.left}px`,
     });
 
     return scaleFactor;
@@ -132,6 +94,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     scaleFactor = scaleContent();
   });
   canvas.addEventListener("click", (e) => {
+    document.body.removeChild(document.getElementById('just1'))
     const rect = canvas.getBoundingClientRect();
     const x = (e.clientX - rect.left) / scaleFactor;
     const y = (e.clientY - rect.top) / scaleFactor;
