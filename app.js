@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", async () => {
+
+  // Zooming to the fullest
+  document.body.style.transform = "scale(1)";
+  document.body.style.transformOrigin = "top left";
+  document.body.style.width = "125%"; 
+
   const canvas = document.getElementById("canvas");
   const width = canvas.offsetWidth;
   const height = canvas.offsetHeight;
